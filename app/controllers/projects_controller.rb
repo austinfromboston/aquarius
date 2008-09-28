@@ -1,0 +1,3 @@
+class ProjectsController < ResourcefulController
+end
+

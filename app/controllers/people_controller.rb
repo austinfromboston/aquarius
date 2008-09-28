@@ -1,0 +1,2 @@
+class PeopleController < ResourcefulController
+end
