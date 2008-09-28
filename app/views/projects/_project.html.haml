@@ -1,5 +1,5 @@
 .project_name
-  = project.name
+  = link_to project.name, edit_project_path( project )
 .org
   = project.organization.name if project.organization
 .status

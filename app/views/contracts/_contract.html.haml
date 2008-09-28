@@ -1,7 +1,8 @@
-.contract
-  = contract.contract_type
-.project
-  = contract.project.name
+.name
+  = link_to "Contract #{contract.contract_type}", edit_contract_path( contract )
+  for
+  .project
+    = link_to contract.project.name, edit_project_path( contract.project )
 .rate
   - if contract.hourly_rate
     = contract.hourly_rate
