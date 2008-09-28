@@ -4,3 +4,4 @@ tmp
 db/*sqlite3
 public/stylesheets/*css
 .DS_Store
+*swp

@@ -1,0 +1,32 @@
+!!!
+%head
+  %title
+    = controller.controller_name.titleize
+    &mdash;
+    = controller.action_name.titleize
+  = stylesheet_link_tag 'blueprint/print', :media => 'print'
+  = stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection'
+  <!--[if IE]>
+  = stylesheet_link_tag 'blueprint/ie'
+  <![endif]-->
+  = stylesheet_link_tag 'application'
+  = stylesheet_link_tag 'forms'
+  = stylesheet_link_tag 'ui'
+%body
+  #outer_container.span-24
+    #header.container
+      = render 'layouts/menu'
+      .flash-notice
+        = flash[:notice]
+      .flash-error
+        = flash[:error]
+    #main.container
+      = yield
+    #footer.container
+
+  = javascript_include_tag 'jquery/jquery-1.2.6.js'
+  - javascript_tag do
+    $( function() {
+    = yield :dom_ready
+    } );
+
