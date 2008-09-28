@@ -1,0 +1,14 @@
+.contract
+  = contract.contract_type
+.project
+  = contract.project.name
+.rate
+  - if contract.hourly_rate
+    = contract.hourly_rate
+    \/hr
+  - if contract.fixed_fee
+    = contract.fixed_fee
+    \/fixed
+  - if contract.monthly_fee
+    = contract.monthly_fee
+    \/monthly

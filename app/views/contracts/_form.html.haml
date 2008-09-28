@@ -1,0 +1,26 @@
+%p
+  = f.label :contract_type
+  = f.select :contract_type, Contract::CONTRACT_TYPES
+%p
+  = f.label :project_id
+  = f.select :project_id, project_options
+%p
+  = f.label :billable_status
+  = f.select :billable_status, Contract::BILLING_STATUSES
+
+%p
+  = f.label :description
+  = f.text_area :description
+%p
+  = f.label :hourly_rate
+  = f.text_field :hourly_rate, :size => 8
+%p
+  = f.label :fixed_fee
+  = f.text_field :fixed_fee, :size => 8
+%p
+  = f.label :monthly_fee
+  = f.text_field :monthly_fee, :size => 8
+%p
+  = f.label :account_id
+  = f.text_field :account_id, :size => 8
+

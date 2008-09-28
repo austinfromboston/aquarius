@@ -1,0 +1,32 @@
+%p
+  = f.label :name
+  = f.text_field :name
+%p
+  = f.label :url
+  = f.text_field :url
+%p
+  = f.label :annual_budget
+  = f.text_field :annual_budget
+%p
+  = f.label :paid_staff
+  = f.text_field :paid_staff
+%p
+  = f.label :phone
+  = f.text_field :phone
+%p
+  = f.label :address
+  = f.text_field :address
+  = f.label :address2, "&nbsp;"
+  = f.text_field :address2
+%p
+  = f.label :city
+  = f.text_field :city
+%p
+  = f.label :state
+  = f.text_field :state, :size => 5
+%p
+  = f.label :zip
+  = f.text_field :zip
+%p
+  = f.label :country
+  = f.country_select :country, [ 'United States', 'Canada' ]

@@ -1,6 +1,7 @@
 .ui-block.span-12
-  %h6.info Edit Person
-  - form_for @person do |f|
+  %h6.info Edit Contract
+  - form_for @contract do |f|
     = render :partial => 'form', :locals => { :f => f }
     %p.submit
       = f.submit "Update"
+

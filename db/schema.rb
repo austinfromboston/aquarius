@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20080927225020) do
     t.string  "name"
     t.string  "service_type"
     t.string  "status"
-    t.string  "result_url"
+    t.string  "url"
     t.text    "related_urls"
     t.text    "description"
     t.integer "primary_contact_id"

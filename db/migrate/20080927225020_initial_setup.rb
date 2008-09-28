@@ -29,7 +29,7 @@ class InitialSetup < ActiveRecord::Migration
 
     create_table "projects" do |t|
       t.string "name", "service_type", "status"
-      t.string "result_url"
+      t.string "url"
       t.text "related_urls", "description"
       t.integer "primary_contact_id", "organization_id"
     end
