@@ -1,0 +1,5 @@
+%h1 Affiliations
+%ul
+  - for affiliation in @affiliations
+    %li
+      = render :partial => 'affiliation', :locals => { :affiliation => affiliation }

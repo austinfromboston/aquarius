@@ -1,0 +1,8 @@
+.ui-block
+  %h6.info Edit Person
+  - form_for @person, :url => person_url(@person), :html => { :class => 'badge' } do |f|
+    = render :partial => 'form', :locals => { :f => f }
+    %p.submit
+      = f.submit "Update"
+
+

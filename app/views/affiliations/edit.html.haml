@@ -1,0 +1,16 @@
+.ui-block.span-12
+  %h6.info Edit Affiliation
+  - form_for @affiliation do |f|
+    = render :partial => 'form', :locals => { :f => f }
+    %p.submit
+      = f.submit "Update"
+
+  = link_to "delete", "delete", :class => 'show_delete_block'
+  - form_for @affiliation, {}, :html => { :class => 'js-hide delete_block', :method => :delete } do |f|
+    %p.submit
+      = f.submit "Permanently delete this affiliation", :class => 'delete button'
+
+- content_for :dom_ready do
+  :plain
+    $('.show_delete_block').click( function() { $('.delete_block').toggle(); return false; } );
+

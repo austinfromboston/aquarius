@@ -1,0 +1,10 @@
+- content_for :dom_ready do
+  :plain
+    $('input[value!=]').parents('.addable').show();
+    $('.add_item_link').click( function(ev) {
+      var addable_block = $(ev.target).parents('.addable_block');
+      $('.addable:hidden:eq(0)', addable_block).show();
+      if ($('.addable:hidden', addable_block ).length == 0) { $(this).hide(); }
+      return false;
+    } );
+

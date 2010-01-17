@@ -1,0 +1,1 @@
+= select_tag "contract_name", options_for_select( [['','']] + @contracts.map { |c| [ c.display_name, c.id ] }.sort_by(&:first), ( params[:selected] && params[:selected].to_i ) )
